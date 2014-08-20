@@ -20,9 +20,7 @@ from google.appengine.ext.webapp import template
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        #self.response.write('Hello world!')
-        path = os.path.join(os.path.dirname(__file__), 'index.html')
-    	self.response.out.write(template.render(path, {}))
+        self.redirect("http://2014.devfestne.com.br/")
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
